@@ -1,0 +1,98 @@
+{
+  "theme": "Light",
+  "archetype": "Organic & Earthy + Swiss Scientific (CleanTech / Industrial)",
+  "colors": {
+    "background": "#E7E7F7",
+    "surface": "#F4F4FA",
+    "surface_glass": "rgba(255, 255, 255, 0.45)",
+    "surface_glass_dark": "rgba(15, 42, 68, 0.6)",
+    "text_primary": "#0F2A44",
+    "text_secondary": "#4A6177",
+    "text_inverse": "#FFFFFF",
+    "accent_ocean": "#0F2A44",
+    "accent_energy": "#A3E635",
+    "accent_teal": "#138A72",
+    "border_glass": "rgba(255, 255, 255, 0.6)",
+    "border_glass_dark": "rgba(19, 138, 114, 0.3)"
+  },
+  "typography": {
+    "fonts": {
+      "display": {
+        "family": "Chivo, sans-serif",
+        "import_url": "https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap"
+      },
+      "body": {
+        "family": "Figtree, sans-serif",
+        "import_url": "https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap"
+      }
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl tracking-tighter font-black",
+      "h2": "text-3xl md:text-4xl tracking-tight font-bold",
+      "h3": "text-xl md:text-2xl tracking-tight font-bold",
+      "body": "text-base md:text-lg leading-relaxed",
+      "small": "text-sm uppercase tracking-widest font-semibold"
+    }
+  },
+  "glassmorphism": {
+    "blur": "backdrop-blur-xl",
+    "background_light": "bg-white/40",
+    "background_dark": "bg-[#0F2A44]/60",
+    "border_light": "border border-white/60 shadow-[0_8px_32px_rgba(15,42,68,0.06)]",
+    "border_dark": "border border-[#138A72]/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+    "hover_state": "hover:bg-white/60 hover:-translate-y-1 transition-all duration-300 ease-out"
+  },
+  "hero_swirl_spec": {
+    "container": "relative w-full h-screen bg-[#0F2A44] overflow-hidden flex items-center justify-center",
+    "description": "Animated SVG/CSS blobs over a deep navy base transitioning to light lavender at the bottom.",
+    "blobs": [
+      {
+        "color": "bg-[#138A72]",
+        "classes": "absolute w-[40vw] h-[40vw] rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-[spin_20s_linear_infinite]"
+      },
+      {
+        "color": "bg-[#A3E635]",
+        "classes": "absolute w-[30vw] h-[30vw] rounded-full mix-blend-screen filter blur-[80px] opacity-60 animate-[spin_25s_linear_infinite_reverse] translate-x-1/4"
+      },
+      {
+        "color": "bg-[#0F2A44]",
+        "classes": "absolute w-[50vw] h-[50vw] rounded-full mix-blend-multiply filter blur-[120px] opacity-80"
+      }
+    ],
+    "transition_overlay": "absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-[#E7E7F7]"
+  },
+  "layout_blueprint": {
+    "Nav": "Sticky header (z-50) using light glassmorphism (`backdrop-blur-xl bg-[#E7E7F7]/70 border-b border-white/50`). Left: Logo. Right: Anchors to sections.",
+    "Hero": "Deep oceanic base `#0F2A44`. Behind the text, the CSS animated swirl. Text: 'Climate Positive Desalination' in white, Chivo font. Gradient fade at bottom bridging to `#E7E7F7`.",
+    "Problem": "Grid layout (md:grid-cols-2 lg:grid-cols-4). Light glass cards resting on the `#E7E7F7` bg. Titles: High energy cost, Hazardous waste, Skilled dependency, $31B stale tech.",
+    "ParadigmBanner": "Full width, deep oceanic blue `#0F2A44` background. Large white text: 'Desalination doesn't have to cost energy. It can generate it.' Accented with the ocean wave texture masked seamlessly with low opacity.",
+    "Process4Step": "Bento-style or linear grid mapping 'Feed waste → Deionize → Harvest energy → Close loop'. Minimalist layout using lucide-react icons, connected by subtle lines.",
+    "PerformanceStats": "3 prominent glassmorphism stat cards overlapping a soft radial gradient. Accent color `#A3E635` used strictly for the massive numbers: '>0 Wh/L', '<500 ppm', '$0 feedstock'.",
+    "ComparisonTable": "Standard Tailwind table layout. Table headers bold. Highlight the CPSD row/column using a subtle `#138A72`/10 background and white/glass border to make it stand out against RO and ED.",
+    "MarketFunnel": "Visual arrangement of 3 layers (Concentric circles or cascading glass cards) showcasing $30B TAM, $4B SAM, $40M SOM.",
+    "Team": "Grid with 3 profile cards for Dr. Purnima Jalihal, Abhishek Padmanabhan, Dr. VMV Sai Krishna. Light glassmorphism cards. Clean layout, image on top, name/title below.",
+    "Contact": "Minimal footer-preceding section. Mailto CTA button modeled as a large glass element with hover effect. Contact info displayed cleanly.",
+    "Footer": "Dark `#0F2A44` background, white text. Logo display, copyright, and subtle anchor links."
+  },
+  "media": {
+    "logo": "https://customer-assets.emergentagent.com/job_254b404b-7873-4515-bdac-426c3efec3f4/artifacts/x61qgwzc_o2o%20logo%20-%20Copy.png",
+    "texture_ocean": "https://images.unsplash.com/photo-1764057534161-b97a6337698b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG9jZWFuJTIwd2F2ZSUyMHRleHR1cmV8ZW58MHx8fHwxNzc3OTg5Nzc3fDA&ixlib=rb-4.1.0&q=85",
+    "team_purnima": "https://images.unsplash.com/photo-1609371497456-3a55a205d5eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMHdvbWFufGVufDB8fHx8MTc3Nzk4OTc3N3ww&ixlib=rb-4.1.0&q=85",
+    "team_abhishek": "https://images.unsplash.com/photo-1649433658557-54cf58577c68?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMG1hbnxlbnwwfHx8fDE3Nzc5ODk3Nzd8MA&ixlib=rb-4.1.0&q=85",
+    "team_sai": "https://images.unsplash.com/photo-1641108001784-cdf7d87b353f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMG1hbnxlbnwwfHx8fDE3Nzc5ODk3Nzd8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "motion": {
+    "entrance": "Use framer-motion for staggering lists/cards. Elements should slide up by 20px and fade in with a duration of 0.6s and ease-out.",
+    "hover": "Interactive cards should lift (`-translate-y-1`) and increase the opacity of their border and shadow.",
+    "scroll": "Smooth scrolling is required for all anchor links."
+  },
+  "do_not_list": [
+    "NO saturated purple or violet gradients anywhere.",
+    "NO dark text on dark backgrounds.",
+    "NO white text on the light lavender background.",
+    "NO generic tech fonts like Inter, Roboto, or Space Grotesk. Stick to Chivo + Figtree.",
+    "NO generic standard SaaS hero image; strictly use the CSS/SVG animated swirl.",
+    "NO placeholder domains for missing images, use the provided Unsplash URLs.",
+    "NO teal in the standard backgrounds, use it strictly as an accent for the swirl and highlights."
+  ]
+}
