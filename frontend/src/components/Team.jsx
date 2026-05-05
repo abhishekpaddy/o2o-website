@@ -6,7 +6,7 @@ const team = [
     {
         name: "Dr. Purnima Jalihal",
         role: "Co-Founder / CTO",
-        img: "https://images.unsplash.com/photo-1609371497456-3a55a205d5eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMHdvbWFufGVufDB8fHx8MTc3Nzk4OTc3N3ww&ixlib=rb-4.1.0&q=85",
+        img: "https://customer-assets.emergentagent.com/job_startup-blur-design/artifacts/mnigi9gq_image.png",
         linkedin: "https://www.linkedin.com/in/purnima-jalihal-352511186/",
         bio: [
             "Former Director, National Institute of Ocean Technology, Chennai",
@@ -17,7 +17,7 @@ const team = [
     {
         name: "Abhishek Padmanabhan",
         role: "Co-Founder / CEO",
-        img: "https://images.unsplash.com/photo-1649433658557-54cf58577c68?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW58ZW58MHx8fHwxNzc3OTg5Nzc3fDA&ixlib=rb-4.1.0&q=85",
+        img: "https://customer-assets.emergentagent.com/job_startup-blur-design/artifacts/ri81mmva_image.png",
         linkedin: "https://www.linkedin.com/in/abhishekpaddy/",
         bio: [
             "Director, CoE in Energy Sciences at Atria University",

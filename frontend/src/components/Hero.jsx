@@ -12,46 +12,37 @@ export const Hero = () => {
         <section
             id="home"
             data-testid="hero-section"
-            className="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-ocean-deep grain"
+            className="relative w-full min-h-screen overflow-hidden flex items-center bg-ocean-deep grain"
         >
-            {/* Animated swirl layers */}
-            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-                {/* Deep core blue blob */}
+            {/* Real abstract graphic from deck */}
+            <div
+                className="absolute inset-0 pointer-events-none"
+                aria-hidden="true"
+            >
                 <div
-                    className="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vw] rounded-full opacity-80 mix-blend-screen animate-blob-drift"
+                    className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-90 animate-blob-drift"
+                    style={{
+                        backgroundImage:
+                            "url('https://customer-assets.emergentagent.com/job_startup-blur-design/artifacts/ansfkbll_image.png')",
+                        animationDuration: "40s",
+                    }}
+                />
+                {/* left-to-center vignette so text stays readable */}
+                <div
+                    className="absolute inset-0"
                     style={{
                         background:
-                            "radial-gradient(circle at 40% 40%, #1B3A5C 0%, rgba(15,42,68,0) 60%)",
+                            "linear-gradient(90deg, rgba(8,27,46,0.92) 0%, rgba(8,27,46,0.75) 35%, rgba(8,27,46,0.25) 70%, rgba(8,27,46,0) 100%)",
+                    }}
+                />
+                {/* subtle animated energy glow */}
+                <div
+                    className="absolute top-[20%] right-[8%] w-[35vw] h-[35vw] rounded-full opacity-40 mix-blend-screen animate-blob-drift-alt"
+                    style={{
+                        background:
+                            "radial-gradient(circle, #A3E635 0%, rgba(163,230,53,0) 60%)",
                         filter: "blur(80px)",
-                    }}
-                />
-                {/* Teal swirl */}
-                <div
-                    className="absolute top-[10%] left-[20%] w-[55vw] h-[55vw] rounded-full opacity-80 mix-blend-screen animate-blob-drift-alt"
-                    style={{
-                        background:
-                            "radial-gradient(circle at 50% 50%, #138A72 0%, rgba(19,138,114,0) 65%)",
-                        filter: "blur(90px)",
-                    }}
-                />
-                {/* Energy lime pop */}
-                <div
-                    className="absolute top-[30%] right-[5%] w-[38vw] h-[38vw] rounded-full opacity-70 mix-blend-screen animate-blob-drift"
-                    style={{
-                        background:
-                            "radial-gradient(circle at 50% 50%, #A3E635 0%, rgba(163,230,53,0) 60%)",
-                        filter: "blur(70px)",
                         animationDuration: "26s",
-                    }}
-                />
-                {/* Cyan highlight */}
-                <div
-                    className="absolute bottom-[15%] left-[10%] w-[40vw] h-[40vw] rounded-full opacity-60 mix-blend-screen animate-blob-drift-alt"
-                    style={{
-                        background:
-                            "radial-gradient(circle at 50% 50%, #64A5C5 0%, rgba(100,165,197,0) 60%)",
-                        filter: "blur(80px)",
-                        animationDuration: "32s",
                     }}
                 />
             </div>
