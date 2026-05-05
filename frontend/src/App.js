@@ -8,7 +8,7 @@ import {
     Paradigm,
     Process,
     Performance,
-    Comparison,
+    CategoryLine,
     Market,
 } from "./components/Sections";
 import { Team } from "./components/Team";
@@ -43,7 +43,7 @@ const Landing = () => {
                 <Paradigm />
                 <Process />
                 <Performance />
-                <Comparison />
+                <CategoryLine />
                 <Market />
                 <Team />
                 <Contact />

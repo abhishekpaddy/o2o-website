@@ -7,6 +7,7 @@ const team = [
         name: "Dr. Purnima Jalihal",
         role: "Co-Founder / CTO",
         img: "https://images.unsplash.com/photo-1609371497456-3a55a205d5eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMHdvbWFufGVufDB8fHx8MTc3Nzk4OTc3N3ww&ixlib=rb-4.1.0&q=85",
+        linkedin: "https://www.linkedin.com/in/purnima-jalihal-352511186/",
         bio: [
             "Former Director, National Institute of Ocean Technology, Chennai",
             "25+ years in ocean energy and desalination",
@@ -16,21 +17,12 @@ const team = [
     {
         name: "Abhishek Padmanabhan",
         role: "Co-Founder / CEO",
-        img: "https://images.unsplash.com/photo-1649433658557-54cf58577c68?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMG1hbnxlbnwwfHx8fDE3Nzc5ODk3Nzd8MA&ixlib=rb-4.1.0&q=85",
+        img: "https://images.unsplash.com/photo-1649433658557-54cf58577c68?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW58ZW58MHx8fHwxNzc3OTg5Nzc3fDA&ixlib=rb-4.1.0&q=85",
+        linkedin: "https://www.linkedin.com/in/abhishekpaddy/",
         bio: [
             "Director, CoE in Energy Sciences at Atria University",
             "Ex-Tech Lead at SunEdison India (10,000+ solar water pumps)",
             "Cornell / IITB · Aditya Birla Scholar · Emergent Ventures Fellow",
-        ],
-    },
-    {
-        name: "Dr. VMV Sai Krishna",
-        role: "Operations Engineer",
-        img: "https://images.unsplash.com/photo-1641108001784-cdf7d87b353f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMGluZGlhbiUyMG1hbnxlbnwwfHx8fDE3Nzc5ODk3Nzd8MA&ixlib=rb-4.1.0&q=85",
-        bio: [
-            "PhD from SRM University in Environmental Engineering",
-            "Desalination expert",
-            "Fabrication and Test Lead",
         ],
     },
 ];
@@ -53,7 +45,7 @@ export const Team = () => (
                 </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
                 {team.map((m, i) => (
                     <GlassCard
                         key={i}
@@ -85,9 +77,10 @@ export const Team = () => (
                                 </p>
                             </div>
                             <a
-                                href="#"
-                                onClick={(e) => e.preventDefault()}
-                                className="w-9 h-9 rounded-full bg-ocean/5 hover:bg-ocean/10 text-ocean flex items-center justify-center transition"
+                                href={m.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded-full bg-ocean/5 hover:bg-ocean text-ocean hover:text-white flex items-center justify-center transition"
                                 aria-label={`${m.name} LinkedIn`}
                                 data-testid={`team-linkedin-${i}`}
                             >

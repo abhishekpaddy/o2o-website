@@ -8,8 +8,6 @@ import {
     Recycle,
     Battery,
     Factory,
-    Check,
-    X,
 } from "lucide-react";
 import { GlassCard } from "./GlassCard";
 
@@ -261,242 +259,51 @@ export const Performance = () => {
                         </div>
                     ))}
                 </div>
-                <p className="mt-10 text-white/40 text-xs max-w-3xl">
-                    * −9.7 Wh/L observed at 1 mL; −6 Wh/L observed at 250 mL.
-                    Consistent output baseline established using 1 M sulphuric
-                    acid, sodium hydroxide, and saltwater at TDS = 35,000.
-                </p>
             </div>
         </section>
     );
 };
 
-// ------------- COMPARISON -------------
-export const Comparison = () => {
-    const rows = [
-        {
-            k: "Generation",
-            cpsd: "3rd Gen — net energy+",
-            ro: "1st Gen",
-            ed: "1st–2nd Gen",
-        },
-        {
-            k: "Net energy",
-            cpsd: { good: true, text: "Generates energy" },
-            ro: { good: false, text: "Energy intensive" },
-            ed: { good: false, text: "Net negative" },
-        },
-        {
-            k: "Energy use",
-            cpsd: ">0 Wh/L net generation",
-            ro: "3.5–4 Wh/L extremely high",
-            ed: "1–3 Wh/L limited use",
-        },
-        {
-            k: "Status",
-            cpsd: "TRL 3 → TRL 7",
-            ro: "Mature, high-cost (Veolia, Suez)",
-            ed: "Emerging, pre-commercial",
-        },
-    ];
+// ------------- CATEGORY LINE (replaces Comparison) -------------
+export const CategoryLine = () => (
+    <section
+        data-testid="category-line-section"
+        className="relative py-20 md:py-28 px-6 md:px-10 bg-lavender"
+    >
+        <div className="max-w-5xl mx-auto text-center">
+            <span className="section-label">Category Leap</span>
+            <p className="mt-6 font-display font-black text-ocean text-3xl md:text-5xl leading-[1.1] tracking-tighter">
+                A third-generation leap — the only system that{" "}
+                <span className="text-teal italic">generates</span> energy
+                while producing freshwater.
+            </p>
+        </div>
+    </section>
+);
 
-    const renderCell = (val, highlight = false) => {
-        if (typeof val === "string") {
-            return (
-                <span
-                    className={`text-sm ${
-                        highlight ? "text-ocean font-semibold" : "text-inkblue"
-                    }`}
-                >
-                    {val}
-                </span>
-            );
-        }
-        return (
-            <span
-                className={`inline-flex items-center gap-2 text-sm ${
-                    highlight
-                        ? "text-ocean font-semibold"
-                        : val.good
-                          ? "text-teal"
-                          : "text-inkblue/70"
-                }`}
-            >
-                {val.good ? (
-                    <Check
-                        size={16}
-                        className={highlight ? "text-teal" : "text-teal/70"}
-                    />
-                ) : (
-                    <X size={16} className="text-inkblue/40" />
-                )}
-                {val.text}
-            </span>
-        );
-    };
-
-    return (
-        <section
-            data-testid="comparison-section"
-            className="relative py-24 md:py-32 px-6 md:px-10 bg-lavender"
-        >
-            <div className="max-w-7xl mx-auto">
-                <SectionTitle
-                    eyebrow="Category Leap"
-                    title="A third-generation approach."
-                    subtitle="CPSD is the only system that generates energy while producing freshwater."
-                />
-                <div className="mt-14 glass-light rounded-3xl overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full min-w-[720px]" data-testid="comparison-table">
-                            <thead>
-                                <tr className="border-b border-ocean/10">
-                                    <th className="text-left p-6 w-1/4 font-display text-ocean text-sm uppercase tracking-widest"></th>
-                                    <th className="text-left p-6 w-1/4 bg-teal/10 relative">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-2 h-2 rounded-full bg-energy animate-pulse-soft" />
-                                            <span className="font-display font-black text-ocean text-base md:text-lg tracking-tight">
-                                                OceanToOasis CPSD
-                                            </span>
-                                        </div>
-                                    </th>
-                                    <th className="text-left p-6 w-1/4 font-display font-bold text-ocean/70 text-base tracking-tight">
-                                        Reverse Osmosis
-                                    </th>
-                                    <th className="text-left p-6 w-1/4 font-display font-bold text-ocean/70 text-base tracking-tight">
-                                        Electrodialysis / CDI
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {rows.map((r, i) => (
-                                    <tr
-                                        key={i}
-                                        className="border-b border-ocean/5 last:border-0"
-                                    >
-                                        <td className="p-6 font-semibold text-ocean text-sm">
-                                            {r.k}
-                                        </td>
-                                        <td className="p-6 bg-teal/5">
-                                            {renderCell(r.cpsd, true)}
-                                        </td>
-                                        <td className="p-6">
-                                            {renderCell(r.ro)}
-                                        </td>
-                                        <td className="p-6">
-                                            {renderCell(r.ed)}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-// ------------- MARKET -------------
-export const Market = () => {
-    const tiers = [
-        {
-            size: "$30B",
-            label: "TAM",
-            desc: "Global industrial desalination market (2032)",
-            width: "100%",
-            color: "bg-ocean",
-        },
-        {
-            size: "$4B",
-            label: "SAM",
-            desc: "Coastal industries with existing acid/alkali waste streams",
-            width: "66%",
-            color: "bg-teal",
-        },
-        {
-            size: "$40M",
-            label: "SOM",
-            desc: "50 industrial installations over ~5 years",
-            width: "33%",
-            color: "bg-energy",
-        },
-    ];
-    return (
-        <section
-            id="market"
-            data-testid="market-section"
-            className="relative py-24 md:py-32 px-6 md:px-10 bg-lavender"
-        >
-            <div className="max-w-7xl mx-auto">
-                <SectionTitle
-                    eyebrow="Market Opportunity"
-                    title="Sitting at the intersection of climate, water & industry."
-                    subtitle="Initial focus: water-stressed coastal regions in India and MENA with active industrial waste streams."
-                />
-                <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-                    {/* Funnel viz */}
-                    <div className="lg:col-span-3 space-y-4">
-                        {tiers.map((t, i) => (
-                            <div
-                                key={i}
-                                className="glass-light rounded-2xl p-6 glass-card-hover"
-                                data-testid={`market-tier-${i}`}
-                            >
-                                <div className="flex items-center justify-between mb-3">
-                                    <div className="flex items-center gap-3">
-                                        <span
-                                            className={`${t.color} text-white text-xs font-black px-3 py-1 rounded-full tracking-widest`}
-                                        >
-                                            {t.label}
-                                        </span>
-                                        <span className="font-display font-black text-ocean text-3xl md:text-4xl tracking-tighter">
-                                            {t.size}
-                                        </span>
-                                    </div>
-                                </div>
-                                <p className="text-inkblue text-sm">{t.desc}</p>
-                                <div className="mt-4 h-1.5 rounded-full bg-ocean/5 overflow-hidden">
-                                    <div
-                                        className={`${t.color} h-full rounded-full transition-all duration-700`}
-                                        style={{ width: t.width }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    {/* Side callout */}
-                    <div className="lg:col-span-2">
-                        <div className="glass-dark rounded-3xl p-8 text-white">
-                            <span className="section-label text-energy">
-                                Go-to-market
-                            </span>
-                            <h3 className="mt-4 font-display font-black text-2xl md:text-3xl leading-tight tracking-tight">
-                                Hardware-led, recurring, licensable.
-                            </h3>
-                            <ul className="mt-6 space-y-4 text-sm text-white/80">
-                                {[
-                                    "Unit sales to industrial operators",
-                                    "Consumables & service contracts",
-                                    "Carbon credits & clean-water offtake upside",
-                                    "Technology licensing with IP moat",
-                                ].map((x, i) => (
-                                    <li
-                                        key={i}
-                                        className="flex items-start gap-3"
-                                    >
-                                        <Check
-                                            size={16}
-                                            className="text-energy mt-0.5 shrink-0"
-                                        />
-                                        <span>{x}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+// ------------- MARKET (one-line) -------------
+export const Market = () => (
+    <section
+        id="market"
+        data-testid="market-section"
+        className="relative overflow-hidden py-24 md:py-32 px-6 md:px-10 bg-ocean-deep grain"
+    >
+        <div
+            className="absolute -top-1/3 left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full opacity-30 pointer-events-none animate-blob-drift"
+            style={{
+                background:
+                    "radial-gradient(circle, #138A72 0%, rgba(19,138,114,0) 60%)",
+                filter: "blur(100px)",
+            }}
+        />
+        <div className="relative max-w-5xl mx-auto text-center">
+            <span className="section-label text-energy">Market</span>
+            <h2 className="mt-6 font-display font-black text-white text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tighter">
+                Industrial desalination is a{" "}
+                <span className="text-energy">$30&nbsp;billion</span> market.
+                <br />
+                We're disrupting it.
+            </h2>
+        </div>
+    </section>
+);
