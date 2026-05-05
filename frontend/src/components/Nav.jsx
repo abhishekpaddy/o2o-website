@@ -65,7 +65,7 @@ export const Nav = () => {
                         </button>
                     ))}
                     <a
-                        href="mailto:abhishekp@oceantooasis.in"
+                        href="mailto:info@oceantooasis.in"
                         data-testid="nav-cta"
                         className="ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-ocean text-white text-sm font-semibold hover:bg-ocean-mid transition-all duration-300 shadow-[0_6px_24px_rgba(15,42,68,0.2)] hover:-translate-y-0.5"
                     >
@@ -96,7 +96,7 @@ export const Nav = () => {
                         </button>
                     ))}
                     <a
-                        href="mailto:abhishekp@oceantooasis.in"
+                        href="mailto:info@oceantooasis.in"
                         className="mt-2 text-center px-5 py-3 rounded-xl bg-ocean text-white font-semibold"
                     >
                         Get in touch

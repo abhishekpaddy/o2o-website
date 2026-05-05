@@ -39,7 +39,7 @@ export const Contact = () => (
                         partners, and policy stakeholders — let's talk.
                     </p>
                     <a
-                        href="mailto:abhishekp@oceantooasis.in?subject=OceanToOasis%20%E2%80%94%20Let%27s%20talk"
+                        href="mailto:info@oceantooasis.in?subject=OceanToOasis%20%E2%80%94%20Let%27s%20talk"
                         data-testid="contact-primary-cta"
                         className="mt-10 group inline-flex items-center gap-3 px-8 py-5 rounded-full bg-energy text-ocean font-bold text-base hover:bg-white transition-all duration-300 shadow-[0_10px_40px_rgba(163,230,53,0.3)] hover:-translate-y-1"
                     >
@@ -53,7 +53,7 @@ export const Contact = () => (
 
                 <div className="glass-dark rounded-3xl p-8 md:p-10 space-y-6">
                     <a
-                        href="mailto:abhishekp@oceantooasis.in"
+                        href="mailto:info@oceantooasis.in"
                         className="flex items-start gap-5 group"
                         data-testid="contact-email"
                     >
@@ -65,7 +65,7 @@ export const Contact = () => (
                                 Email
                             </div>
                             <div className="mt-1 text-white font-display font-bold text-lg md:text-xl tracking-tight break-all">
-                                abhishekp@oceantooasis.in
+                                info@oceantooasis.in
                             </div>
                         </div>
                     </a>
@@ -101,7 +101,7 @@ export const Contact = () => (
                                 Based in
                             </div>
                             <div className="mt-1 text-white font-display font-bold text-lg md:text-xl tracking-tight">
-                                Chennai & Bengaluru, India
+                                Bengaluru, India
                             </div>
                         </div>
                     </div>

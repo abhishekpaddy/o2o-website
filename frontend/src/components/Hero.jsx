@@ -20,11 +20,10 @@ export const Hero = () => {
                 aria-hidden="true"
             >
                 <div
-                    className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-90 animate-blob-drift"
+                    className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-90"
                     style={{
                         backgroundImage:
                             "url('https://customer-assets.emergentagent.com/job_startup-blur-design/artifacts/ansfkbll_image.png')",
-                        animationDuration: "40s",
                     }}
                 />
                 {/* left-to-center vignette so text stays readable */}
@@ -33,16 +32,6 @@ export const Hero = () => {
                     style={{
                         background:
                             "linear-gradient(90deg, rgba(8,27,46,0.92) 0%, rgba(8,27,46,0.75) 35%, rgba(8,27,46,0.25) 70%, rgba(8,27,46,0) 100%)",
-                    }}
-                />
-                {/* subtle animated energy glow */}
-                <div
-                    className="absolute top-[20%] right-[8%] w-[35vw] h-[35vw] rounded-full opacity-40 mix-blend-screen animate-blob-drift-alt"
-                    style={{
-                        background:
-                            "radial-gradient(circle, #A3E635 0%, rgba(163,230,53,0) 60%)",
-                        filter: "blur(80px)",
-                        animationDuration: "26s",
                     }}
                 />
             </div>
@@ -113,7 +102,7 @@ export const Hero = () => {
                             />
                         </button>
                         <a
-                            href="mailto:abhishekp@oceantooasis.in"
+                            href="mailto:info@oceantooasis.in"
                             data-testid="hero-cta-contact"
                             className="inline-flex items-center gap-2 px-7 py-4 rounded-full glass-dark text-white font-semibold text-sm hover:bg-white/10 transition"
                         >

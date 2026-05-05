@@ -52,7 +52,7 @@ export const Team = () => (
                         className="p-6 overflow-hidden"
                         data-testid={`team-card-${i}`}
                     >
-                        <div className="relative rounded-2xl overflow-hidden aspect-[4/5] mb-6 bg-ocean/5">
+                        <div className="relative rounded-2xl overflow-hidden aspect-square max-w-[240px] mb-6 bg-ocean/5">
                             <img
                                 src={m.img}
                                 alt={m.name}
