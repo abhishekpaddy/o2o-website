@@ -149,7 +149,7 @@ export const Process = () => {
             icon: Battery,
             n: "03",
             title: "Harvest energy",
-            body: "Gibbs Free Energy from acid/alkali neutralization is harvested as electricity — producing drinking-grade freshwater simultaneously.",
+            body: "Neutralization energy from acid / alkali is harvested as electricity — producing drinking-grade freshwater simultaneously.",
         },
         {
             icon: Recycle,

@@ -48,8 +48,20 @@ export const Nav = () => {
                         alt="OceanToOasis"
                         className="h-9 w-9 object-contain transition-transform duration-500 group-hover:rotate-12"
                     />
-                    <span className="font-display font-black text-ocean tracking-tight text-lg hidden sm:block">
-                        Ocean<span className="text-teal">To</span>Oasis
+                    <span
+                        className={`font-display font-black tracking-tight text-lg hidden sm:block transition-colors duration-300 ${
+                            scrolled ? "text-ocean" : "text-white"
+                        }`}
+                    >
+                        Ocean
+                        <span
+                            className={
+                                scrolled ? "text-teal" : "text-energy"
+                            }
+                        >
+                            To
+                        </span>
+                        Oasis
                     </span>
                 </button>
 
@@ -59,7 +71,11 @@ export const Nav = () => {
                             key={l.id}
                             onClick={() => scrollTo(l.id)}
                             data-testid={`nav-link-${l.id}`}
-                            className="px-4 py-2 rounded-full text-sm font-medium text-ocean/80 hover:text-ocean hover:bg-white/60 transition-all duration-300"
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                                scrolled
+                                    ? "text-ocean/80 hover:text-ocean hover:bg-white/60"
+                                    : "text-white/85 hover:text-white hover:bg-white/10"
+                            }`}
                         >
                             {l.label}
                         </button>

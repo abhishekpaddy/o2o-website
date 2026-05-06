@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
     const scrollToTech = () => {
@@ -48,16 +48,6 @@ export const Hero = () => {
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-24 pb-32 w-full">
                 <div className="max-w-4xl">
-                    <div
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark text-energy mb-8 animate-rise-in"
-                        data-testid="hero-eyebrow"
-                    >
-                        <Sparkles size={14} className="text-energy" />
-                        <span className="text-xs font-semibold tracking-[0.22em] uppercase">
-                            Climate-Positive Seawater Deionizer
-                        </span>
-                    </div>
-
                     <h1
                         data-testid="hero-heading"
                         className="font-display font-black text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tighter animate-rise-in"
